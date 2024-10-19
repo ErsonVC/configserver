@@ -1,4 +1,16 @@
 server:
-  port:8081
+  port: 8090
 
-mensaje: "Welcome"
+spring:
+  datasource:
+    url: jdbc:h2:mem:inventario-db
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+mensaje: "Bienvenido al servicio de Inventario"
